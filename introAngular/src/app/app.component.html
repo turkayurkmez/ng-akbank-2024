@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<input type="checkbox" [checked]="isOk" name="" id="">Onay
+<p>{{paragraph}}</p>
+
+<h3>Yapılacaklar:</h3>
+<ul>
+  @if (todoItems) {
+  @for (item of todoItems; track $index) {
+    <li>
+      <input type="checkbox" [(ngModel)]="item.isDone" name="" id=""> 
+      <span>{{item.task}} ({{item.isDone ? 'yapıldı':'yapılmadı'}})</span>
+    </li>
+  }
+}
+
+</ul>
+
+Yorumunuz:<input type="text" [(ngModel)]="comment" name="" id="">
+<p>{{comment}}</p>
