@@ -2,11 +2,16 @@
 <input type="checkbox" [checked]="isOk" name="" id="">Onay
 <p>{{paragraph}}</p>
 
+
+
+<button class="btn btn-success" (click)="filter()">{{filterButtonText}}</button>
+
 <h3>Yapılacaklar:</h3>
+<h5>Yapılması gereken toplam iş: {{getIncompletedTasksCount()}}</h5>
 <ul>
   @if (todoItems) {
   @for (item of todoItems; track $index) {
-    <li>
+    <li [ngClass]="item.isDone ? 'done':'undone'">
       <input type="checkbox" [(ngModel)]="item.isDone" name="" id=""> 
       <span>{{item.task}} ({{item.isDone ? 'yapıldı':'yapılmadı'}})</span>
     </li>
@@ -14,6 +19,11 @@
 }
 
 </ul>
+<hr>
+<app-add-new-todo></app-add-new-todo>
+
+
+
 
 Yorumunuz:<input type="text" [(ngModel)]="comment" name="" id="">
 <p>{{comment}}</p>
