@@ -22,7 +22,7 @@ export const fakeProjects: Project[] = [
         startDate: new Date(2024,9,31),
         completedPercentage:0.35,
         departmentId:2,
-        score:80,
+        score:63,
         tasks:[
             {id:1, name:'X 1', description:'X 1 açıklama', expectedDate: new Date(2024,10,5), isDone:false,projectId:2},
             {id:2, name:'X 2', description:'X 2 açıklama', expectedDate: new Date(2024,10,6), isDone:false,projectId:2},
@@ -36,7 +36,7 @@ export const fakeProjects: Project[] = [
         startDate: new Date(2024,9,31),
         completedPercentage:0.35,
         departmentId:3,
-        score:80,
+        score:75,
         tasks:[
             {id:1, name:'Z 1', description:'Z 1 açıklama', expectedDate: new Date(2024,10,5), isDone:false,projectId:3},
             {id:2, name:'Z 2', description:'Z 2 açıklama', expectedDate: new Date(2024,10,6), isDone:false,projectId:3},

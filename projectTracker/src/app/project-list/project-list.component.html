@@ -1,3 +1,5 @@
-@for (item of projects; track $index) {
+
+<input type="text" placeholder="Proje Adı" [(ngModel)]="keyword" id="" name="" class="form-control">
+@for (item of projects | search: keyword; track $index) {
     <app-project [currentProject]="item"></app-project>
 }
