@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qaK8iSek+E7a1cVBDxAjK5ev0SxEs/LmXIcou9t5jZhwKbwG/U7bXGcu4DOTtfh9t6fC0LCn6FE65Ho3SXifDA==",
+  "dgSpecHash": "aDQGNjO2Whs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\turka\\source\\repos\\Kurumsal\\akbank\\Advanced Angular - II\\ProjectManagement.API\\ProjectManagement.API\\ProjectManagement.API.csproj",
+  "projectFilePath": "C:\\Users\\turka\\source\\repos\\Kurumsal\\akbank\\2024\\Angular\\Temel\\ProjectManagement.API\\ProjectManagement.API\\ProjectManagement.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\turka\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\turka\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

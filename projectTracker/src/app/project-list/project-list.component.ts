@@ -19,14 +19,12 @@ export class ProjectListComponent implements OnInit {
 
   constructor(private activeRoute: ActivatedRoute) {}
   ngOnInit(): void {
-
-    this.activeRoute.params.subscribe((routeParam)=>{
-       console.log(routeParam['depId']);
-       let depId = Number.parseInt(routeParam['depId']);
-       console.log(depId);
-       this.projects = fakeProjects.filter(p=>p.departmentId === depId);
-       console.log(this.projects);
+    this.activeRoute.params.subscribe((routeParam) => {
+      console.log(routeParam['depId']);
+      let depId = Number.parseInt(routeParam['depId']);
+      console.log(depId);
+      this.projects = fakeProjects.filter((p) => p.departmentId === depId);
+      console.log(this.projects);
     });
   }
-
 }
