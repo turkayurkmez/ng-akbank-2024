@@ -1,5 +1,5 @@
 
 <input type="text" placeholder="Proje Adı" [(ngModel)]="keyword" id="" name="" class="form-control">
-@for (item of projects | search: keyword; track $index) {
+@for (item of projects$ | async | search:keyword ; track $index) {
     <app-project [currentProject]="item"></app-project>
 }
