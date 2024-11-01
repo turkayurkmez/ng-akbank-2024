@@ -1,1 +1,37 @@
-<p>add-project works!</p>
+<form [formGroup]="newProjectForm" (ngSubmit)="addProject()" >
+    <div>
+        <label for="">Proje Adı</label>
+        <input type="text" formControlName="name" id="" class="form-control">
+        @if (checkNameRequired()) {
+            <span class="alert alert-danger form-control">Proje adını belirtiniz</span>
+        }
+        @if (checkNameMinLength()) {
+            <span class="alert alert-danger form-control">Proje adı en az üç harf olmalı</span>
+        }
+    </div>
+    <div>
+        <label for="">Proje Açıklaması</label>
+        <input type="text" formControlName="description" id="" class="form-control">
+        @if (checkDescRequired()) {
+            <span class="alert alert-danger form-control">Proje açıklamasını belirtiniz</span>
+        }
+    </div>
+    <div>
+        <label for="">Proje Tarihi</label>
+        <input type="datetime-local"  id="" class="form-control">
+    </div>
+    <div>
+        <label>Departman</label>
+        <select class="form-control" formControlName="departmentId">
+            <option value="">Seçiniz...</option>
+            @for (item of departments$ | async; track $index) {
+                <option value="{{item.id}}">{{item.name}}</option>
+            }
+        </select>
+        @if (checkDepartmentRequired()) {
+            <span class="alert alert-danger form-control">Lütfen Departman seçiniz</span>
+        }
+    </div>
+    <button type="submit" class="btn btn-danger">Ekle</button>
+
+</form>

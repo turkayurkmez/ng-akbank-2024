@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Department } from '../models/department.model';
 import { catchError, Observable, throwError } from 'rxjs';
@@ -18,5 +18,14 @@ export class DepartmentService {
         return throwError(() => new Error(err.message));
       })
     );
+  }
+
+  createNewDepartment(department: Department): Observable<Department>{
+    let option = {
+      headers: new HttpHeaders({
+        'Authentication':'Bearer [TOKEN]'
+      })
+    }
+    return this.httpClient.post<Department>(this.url,department,option);
   }
 }
